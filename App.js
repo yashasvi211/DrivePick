@@ -3,30 +3,48 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons } from 'react-native-vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// Importing screens
+// Import screens
 import HomeScreen from './screens/HomeScreen';
 import AiScreen from './screens/AiScreeen';
 import ProfileScreen from './screens/ProfileScreen';
 import ExploreScreen from './screens/ExploreScreen';
+import CarDetailScreen from './screens/CarDetailScreen';
+import CompareScreen from './screens/CompareScreen';
+import CarComparisonDetails from './screens/CarComparisonDetailsScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
-// Create a stack navigator for HomeScreen that can navigate to ExploreScreen
+// Stack for Home and related screens
 function HomeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen 
         name="HomeMain" 
         component={HomeScreen} 
-        options={{ headerShown: false }}
+        options={{ headerShown: false }} 
       />
       <Stack.Screen 
         name="ExploreScreen" 
-        component={ExploreScreen}
-        options={{ title: 'Explore' }}
+        component={ExploreScreen} 
+        options={{ title: 'Explore' }} 
+      />
+      <Stack.Screen 
+        name="CarDetailScreen" 
+        component={CarDetailScreen} 
+        options={{ title: 'Car Details' }} 
+      />
+      <Stack.Screen 
+        name="CompareScreen" 
+        component={CompareScreen} 
+        options={{ title: 'Compare Cars' }} 
+      />
+      <Stack.Screen 
+        name="CarComparisonDetails" 
+        component={CarComparisonDetails} 
+        options={{ title: 'Car Comparison Details' }} 
       />
     </Stack.Navigator>
   );
@@ -42,7 +60,7 @@ export default function App() {
         >
           <Tab.Screen
             name="Home"
-            component={HomeStack} // Use the stack navigator instead of HomeScreen directly
+            component={HomeStack}
             options={{
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="home-outline" color={color} size={24} />
@@ -71,4 +89,4 @@ export default function App() {
       </NavigationContainer>
     </SafeAreaProvider>
   );
-} 
+}

@@ -1,0 +1,35 @@
+car_name,seat_capacity,body_type,budget,priority1,priority2,priority3
+Maruti Suzuki Dzire,5,Sedan,9-12L,Safety,Mileage,Low Maintenance
+Hyundai Creta,5,SUV,12L+,Performance,Safety,Comfort
+Tata Nexon,5,SUV,9-12L,Safety,Low Maintenance,Mileage
+Maruti Suzuki Swift,5,Hatchback,5-7L,Mileage,Low Maintenance,Comfort
+Honda City,5,Sedan,12L+,Comfort,Safety,Performance
+Kia Seltos,5,SUV,12L+,Performance,Comfort,Safety
+Maruti Suzuki Ertiga,7,MPV,9-12L,Comfort,Mileage,Low Maintenance
+Toyota Innova,7,MPV,12L+,Comfort,Safety,Low Maintenance
+Hyundai Venue,5,SUV,7-9L,Mileage,Safety,Low Maintenance
+Mahindra XUV300,5,SUV,9-12L,Safety,Performance,Mileage
+Renault Triber,7,MPV,5-7L,Mileage,Low Maintenance,Comfort
+Maruti Suzuki Baleno,5,Hatchback,7-9L,Comfort,Mileage,Low Maintenance
+Tata Altroz,5,Hatchback,7-9L,Safety,Mileage,Comfort
+Honda Amaze,5,Sedan,7-9L,Mileage,Low Maintenance,Safety
+Kia Sonet,5,SUV,9-12L,Performance,Safety,Mileage
+Maruti Suzuki Vitara Brezza,5,SUV,9-12L,Mileage,Safety,Low Maintenance
+Hyundai i20,5,Hatchback,7-9L,Comfort,Mileage,Performance
+Tata Harrier,5,SUV,12L+,Performance,Safety,Comfort
+Mahindra Thar,4,SUV,12L+,Performance,Comfort,Safety
+Toyota Fortuner,7,SUV,12L+,Comfort,Performance,Safety
+Maruti Suzuki Wagon R,5,Hatchback,5-7L,Mileage,Low Maintenance,Comfort
+Hyundai Verna,5,Sedan,9-12L,Performance,Comfort,Safety
+Tata Tiago,5,Hatchback,5-7L,Mileage,Safety,Low Maintenance
+Renault Kiger,5,SUV,7-9L,Mileage,Low Maintenance,Comfort
+Kia Carens,7,MPV,9-12L,Comfort,Mileage,Safety
+Maruti Suzuki Celerio,5,Hatchback,5-7L,Mileage,Low Maintenance,Comfort
+Mahindra Scorpio,7,SUV,12L+,Performance,Safety,Comfort
+Honda WR-V,5,SUV,9-12L,Mileage,Safety,Low Maintenance
+Tata Punch,5,SUV,7-9L,Safety,Mileage,Comfort
+Hyundai Alcazar,7,SUV,12L+,Comfort,Performance,Safety
+Maruti Suzuki Ignis,5,Hatchback,7-9L,Mileage,Comfort,Low Maintenance
+Renault Duster,5,SUV,9-12L,Performance,Safety,Mileage
+Toyota Glanza,5,Hatchback,7-9L,Comfort,Mileage,Low Maintenance
+Mahindra Bolero,7,MPV,9-12L,Low Maintenance,Safety,Comfort
