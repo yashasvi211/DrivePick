@@ -4,66 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme, Card } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
-const dummyCars = [
-  {
-    id: 1,
-    name: 'Maruti Suzuki Dzire',
-    type: 'Sedan',
-    image_url: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/170173/dzire-exterior-right-front-three-quarter-27.jpeg?isig=0&q=80',
-    engine_power: '89 PS',
-    fuel_type: 'Petrol',
-    price_range: '₹6.5 - ₹9.4 Lakh',
-    seating_capacity: 5,
-    mileage: '22 kmpl',
-    transmission: 'Manual / Automatic',
-    boot_space: '378 L',
-    variants: [
-      {
-        name: 'Dzire LXI',
-        fuel_type: 'Petrol',
-        transmission: 'Manual',
-        price: '₹6.5 Lakh',
-        features: 'Dual airbags, ABS, Manual AC',
-      },
-      {
-        name: 'Dzire VXI AMT',
-        fuel_type: 'Petrol',
-        transmission: 'Automatic',
-        price: '₹7.9 Lakh',
-        features: 'Touchscreen, Reverse Camera, Auto AC',
-      },
-    ]
-  },
-  {
-    id: 2,
-    name: 'Hyundai Creta',
-    type: 'SUV',
-    image_url: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/106815/creta-exterior-right-front-three-quarter-5.jpeg?isig=0&q=80',
-    engine_power: '113 BHP',
-    fuel_type: 'Petrol / Diesel',
-    price_range: '₹11 - ₹20 Lakh',
-    seating_capacity: 5,
-    mileage: '17 - 21 kmpl',
-    transmission: 'Manual / Automatic',
-    boot_space: '433 L',
-    variants: [
-      {
-        name: 'Creta E',
-        fuel_type: 'Petrol',
-        transmission: 'Manual',
-        price: '₹11 Lakh',
-        features: 'Basic safety features, Power windows',
-      },
-      {
-        name: 'Creta SX (O) Turbo DCT',
-        fuel_type: 'Petrol',
-        transmission: 'Automatic',
-        price: '₹19.2 Lakh',
-        features: 'Panoramic sunroof, ADAS, Bose speakers',
-      },
-    ]
-  },
-];
+
 
 
 export default function ExploreScreen() {
@@ -71,9 +12,12 @@ export default function ExploreScreen() {
   const navigation = useNavigation();
   const [cars, setCars] = useState([]);
 
-  useEffect(() => {
-    setCars(dummyCars);
-  }, []);
+   useEffect(() => {
+  fetch('http://192.168.29.144:5000/cars')  // Or use your local IP if testing on a real device
+    .then(res => res.json())
+    .then(data => setCars(data))
+    .catch(err => console.error('Error fetching cars:', err));
+}, []);
 
   const handleImagePress = (car) => {
     navigation.navigate('CarDetailScreen', { car });

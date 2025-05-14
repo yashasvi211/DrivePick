@@ -13,14 +13,14 @@ export default function CarComparisonDetails({ route }) {
     if (feature === 'engine_power' || feature === 'mileage' || feature === 'seating_capacity') {
       const num1 = parseInt(car1Value);
       const num2 = parseInt(car2Value);
-      
+
       if (!isNaN(num1) && !isNaN(num2)) {
         // For engine power, higher is better
         if (feature === 'engine_power') return num1 > num2 ? 0 : num2 > num1 ? 1 : -1;
-        
+
         // For seating capacity, depends on user preference, so just show difference
         if (feature === 'seating_capacity') return -1;
-        
+
         // For mileage, higher is better
         if (feature === 'mileage') return num1 > num2 ? 0 : num2 > num1 ? 1 : -1;
       }
@@ -75,17 +75,17 @@ export default function CarComparisonDetails({ route }) {
           {/* Feature Comparison */}
           <View style={styles.comparisonContainer}>
             <Text style={styles.sectionTitle}>Feature Comparison</Text>
-            
+
             {comparisonFeatures.map((feature, index) => {
               const betterOption = getBetterOption(
-                feature.key, 
-                selectedCars[0][feature.key], 
+                feature.key,
+                selectedCars[0][feature.key],
                 selectedCars[1][feature.key]
               );
-              
+
               return (
-                <View 
-                  key={index} 
+                <View
+                  key={index}
                   style={[
                     styles.featureRow,
                     index % 2 === 0 ? styles.evenRow : styles.oddRow
@@ -93,7 +93,7 @@ export default function CarComparisonDetails({ route }) {
                 >
                   <Text style={styles.featureLabel}>{feature.label}</Text>
                   <View style={styles.valueContainer}>
-                    <Text 
+                    <Text
                       style={[
                         styles.featureValue,
                         betterOption === 0 ? styles.betterValue : {}
@@ -103,7 +103,7 @@ export default function CarComparisonDetails({ route }) {
                     </Text>
                   </View>
                   <View style={styles.valueContainer}>
-                    <Text 
+                    <Text
                       style={[
                         styles.featureValue,
                         betterOption === 1 ? styles.betterValue : {}
@@ -122,12 +122,12 @@ export default function CarComparisonDetails({ route }) {
             <Text style={styles.sectionTitle}>Summary</Text>
             <View style={styles.summaryContent}>
               <Text style={styles.summaryText}>
-                Both cars offer distinct advantages. The {selectedCars[0].name} features {selectedCars[0].engine_power} 
-                engine power and {selectedCars[0].fuel_type} fuel type, while the {selectedCars[1].name} 
+                Both cars offer distinct advantages. The {selectedCars[0].name} features {selectedCars[0].engine_power}
+                engine power and {selectedCars[0].fuel_type} fuel type, while the {selectedCars[1].name}
                 offers {selectedCars[1].engine_power} engine power with {selectedCars[1].fuel_type} fuel type.
               </Text>
               <Text style={styles.summaryText}>
-                Consider your priorities in terms of price range, seating capacity, and fuel efficiency 
+                Consider your priorities in terms of price range, seating capacity, and fuel efficiency
                 when making your decision.
               </Text>
             </View>
