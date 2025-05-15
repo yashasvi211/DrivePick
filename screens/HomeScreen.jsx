@@ -15,8 +15,8 @@
   const boxItems = [
     { id: '1', title: 'Explore', icon: 'car', screen: 'ExploreScreen' },
     { id: '2', title: 'Compare', icon: 'car-connected', screen: 'CompareScreen' },
-    { id: '3', title: 'Upcoming', icon: 'clock', screen: null },
-    { id: '4', title: 'News', icon: 'newspaper', screen: null },
+    { id: '3', title: 'Upcoming', icon: 'clock', screen: 'UpcomingScreen' },
+  { id: '4', title: 'News', icon: 'newspaper', screen: 'NewsScreen' },
   ];
 
   export default function HomeScreen({ navigation }) {

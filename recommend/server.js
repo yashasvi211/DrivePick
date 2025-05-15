@@ -3,17 +3,22 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const { spawn } = require('child_process');
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
 // ✅ MySQL Connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'car_catalog'
+  // host: 'localhost',
+  // user: 'root',
+  // password: 'password',
+  // database: 'car_catalog'
+    host: 'mysql-340cd3c3-drivepick.d.aivencloud.com',
+  user: 'avnadmin',
+  password: 'AVNS_sq1jwYkPokwi5bqpVSq',
+  database: 'defaultdb',
+  port:'14131',
 });
 
 db.connect((err) => {

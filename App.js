@@ -13,7 +13,7 @@ import ExploreScreen from './screens/ExploreScreen';
 import CarDetailScreen from './screens/CarDetailScreen';
 import CompareScreen from './screens/CompareScreen';
 import CarComparisonDetails from './screens/CarComparisonDetailsScreen';
-
+      import NewsScreen from './screens/NewsScreen';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -21,31 +21,46 @@ const Stack = createStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen 
-        name="HomeMain" 
-        component={HomeScreen} 
-        options={{ headerShown: false }} 
+      <Stack.Screen
+        name="HomeMain"
+        component={HomeScreen}
+        options={{ headerShown: false }}
       />
-      <Stack.Screen 
-        name="ExploreScreen" 
-        component={ExploreScreen} 
-        options={{ title: 'Explore' }} 
+      <Stack.Screen
+        name="ExploreScreen"
+        component={ExploreScreen}
+        options={{ title: 'Explore' }}
       />
-      <Stack.Screen 
-        name="CarDetailScreen" 
-        component={CarDetailScreen} 
-        options={{ title: 'Car Details' }} 
+      <Stack.Screen
+        name="CarDetailScreen"
+        component={CarDetailScreen}
+        options={{ title: 'Car Details' }}
       />
-      <Stack.Screen 
-        name="CompareScreen" 
-        component={CompareScreen} 
-        options={{ title: 'Compare Cars' }} 
+      <Stack.Screen
+        name="CompareScreen"
+        component={CompareScreen}
+        options={{ title: 'Compare Cars' }}
       />
-      <Stack.Screen 
-        name="CarComparisonDetails" 
-        component={CarComparisonDetails} 
-        options={{ title: 'Car Comparison Details' }} 
+      <Stack.Screen
+        name="CarComparisonDetails"
+        component={CarComparisonDetails}
+        options={{ title: 'Car Comparison Details' }}
       />
+      <Stack.Screen
+        name="UpcomingScreen"
+        component={require('./screens/UpcomingScreen').default}
+        options={{ title: 'Upcoming Cars' }}
+      />
+
+
+ 
+<Stack.Screen 
+  name="NewsScreen" 
+  component={NewsScreen} 
+  options={{ title: 'Car News' }} 
+/>
+
+
     </Stack.Navigator>
   );
 }

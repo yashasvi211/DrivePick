@@ -9,7 +9,7 @@ export default function CompareScreen() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    fetch('http://192.168.29.144:5000/cars') // Replace with your machine's IP
+    fetch('http://172.20.10.3:5000/cars') // Replace with your machine's IP
       .then((res) => res.json())
       .then((data) => setCars(data))
       .catch((err) => console.error('Error fetching cars:', err));

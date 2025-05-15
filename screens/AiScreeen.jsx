@@ -48,7 +48,7 @@ export default function AiScreen() {
     setShowResult(false);
 
     try {
-      const response = await fetch('http://192.168.29.144:5000/predict', {
+      const response = await fetch('http://172.20.10.3:5000/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
